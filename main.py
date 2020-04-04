@@ -7,7 +7,7 @@ def gmsg(message):
     if message.text == "Привет":
         bot.send_message(message.from_user.id,"Как дела?)")
 
-@bot.message_handler(content_types=['text'])
+@bot.message_handler(commands=['vkurl'])
 def vkur(message):
     keyboardmain = telebot.types.InlineKeyboardMarkup(row_width=2)
     fbtn = telebot.types.InlineKeyboardButton(text='https://vk.com/rash_ad')
