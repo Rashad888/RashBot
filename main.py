@@ -7,11 +7,13 @@ def gmsg(message):
     if message.text == "Привет":
         bot.send_message(message.from_user.id,"Как дела?)")
 
-@bot.message_handler(content_types=['vkurl'])
+@bot.message_handler(content_types=['comm'])
 def vkur(message):
     keyboardmain = telebot.types.InlineKeyboardMarkup(row_width=2)
     fbtn = telebot.types.InlineKeyboardButton(text='https://vk.com/rash_ad')
     keyboardmain.add(fbtn)
     bot.send_message(message.from_user.id,'Ссылка на страницу Рашада',reply_markup=keyboardmain)
 
-bot.polling(none_stop=True , interval= 0)
+
+if __name__ == "__main__":
+    bot.polling(none_stop=True , interval= 0)
