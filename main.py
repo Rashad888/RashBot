@@ -2,7 +2,7 @@ import telebot
 import botSet
 bot = telebot.TeleBot(botSet.tokken)
 
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['sendmemes'])
 def welMsg(message):
     bot.send_sticker(message.chat_id,'CAACAgIAAxkBAAI-9F6LZzJORuLw_RCmageqFRrtNvDEAAIOAAPSfWEYkBysKo8rSV0YBA')
 
