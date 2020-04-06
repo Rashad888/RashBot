@@ -2,7 +2,7 @@ import telebot
 import botSet
 bot = telebot.TeleBot(botSet.tokken)
 
-@bot.message_handler(content_types=['text'])
+@bot.message_handler(commands=['start'])
 def vkur(message):
     if message.text == "/sendmemes":
         keyboardmain = telebot.types.InlineKeyboardMarkup(row_width=2)
